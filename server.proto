@@ -1,0 +1,29 @@
+syntax="proto3";
+
+package server.test;
+
+option go_package="pb";
+
+message any {}
+
+message text {
+    string text = 1;
+}
+
+message sumRequest {
+    int32 firstNumber = 1;
+    int32 secondNumber = 2 ;
+}
+
+message sumResponse {
+    int32 result = 1;
+}
+
+service testService {
+    // checkConnection | send null requst => recive text as response
+    rpc checkConnection(any) returns (text) {};
+    // sendText | send text requst => recive text as response
+    rpc sendText(text) returns (text) {};
+    // sum | send sumRequest{firstNumber,secondNumber} requst => recive sumResponse{result} as response
+    rpc sum(sumRequest) returns (sumResponse) {};
+}
