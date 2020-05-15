@@ -1,4 +1,4 @@
-![drawing](https://grpc.io/img/logos/grpc-icon-color.png){:height="36px" width="36px"}.
+<img src="https://grpc.io/img/logos/grpc-icon-color.png" width="300" height="300">
 
 # sampleGrpcServer
  sample binary grpc server for client test 
